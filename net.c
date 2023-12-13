@@ -11,12 +11,12 @@
 
 typedef enum error_t{
     WINSOCK_ERR = -1;
-    SOCKET_ERR = -2;
-    SETOPT_ERR = -3;
-    PARSE_ERR = -4;
-    BIND_ERR = -5;
-    LISTEN_ERR = -6;
-    CONNECT_ERR = -7;
+    SOCKET_ERR = -1;
+    SETOPT_ERR = -1;
+    PARSE_ERR = -1;
+    BIND_ERR = -1;
+    LISTEN_ERR = -1;
+    CONNECT_ERR = -1;
 } error_t;
 
 #include "net.h"
@@ -126,6 +126,5 @@ static int8_t _parse_address(char *address, char *ipv4, char *port){
     port[j] = '\0';
     return 0;
 }
-
 
 #endif
